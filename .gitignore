@@ -1,0 +1,26 @@
+# GnuCOBOL intermediate C files
+*.c
+
+bin/
+
+# Object files
+*.o
+
+# Shared libraries (modules)
+*.so
+*.dll
+*.dylib
+
+# Executables
+*.exe
+*.out
+a.out
+program
+
+# Backup files created by some COBOL editors
+*.bak
+*.lst
+*.log
+
+# VS Code workspace files (optional)
+.vscode/
