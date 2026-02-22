@@ -1,0 +1,22 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. NUMERIC-PRECISION.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 QUANTITY           PIC 9(3) VALUE 3.
+       01 UNIT-PRICE         PIC 9(3)V99 VALUE 12.50.
+       01 TAX-RATE           PIC 9V99 VALUE 0.07.
+       01 SUBTOTAL           PIC 9(5)V99 VALUE 0.
+       01 TAX-AMOUNT         PIC 9(5)V99 VALUE 0.
+       01 TOTAL              PIC 9(5)V99 VALUE 0.
+
+       PROCEDURE DIVISION.
+           COMPUTE SUBTOTAL = QUANTITY * UNIT-PRICE
+           COMPUTE TAX-AMOUNT = SUBTOTAL * TAX-RATE
+           COMPUTE TOTAL = SUBTOTAL + TAX-AMOUNT
+
+           DISPLAY "Subtotal: " SUBTOTAL
+           DISPLAY "Tax:      " TAX-AMOUNT
+           DISPLAY "Total:    " TOTAL
+
+           STOP RUN.

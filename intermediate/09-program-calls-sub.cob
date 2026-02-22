@@ -1,0 +1,17 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. CALLS-SUB.
+
+       DATA DIVISION.
+       LINKAGE SECTION.
+       01 LK-AMOUNT          PIC 9(5)V99.
+       01 LK-TAX-RATE        PIC 9V99.
+       01 LK-TAX-OUT         PIC 9(5)V99.
+
+       PROCEDURE DIVISION USING LK-AMOUNT LK-TAX-RATE LK-TAX-OUT.
+           PERFORM SOME-FUNCTION.
+           COMPUTE LK-TAX-OUT = LK-AMOUNT * LK-TAX-RATE.
+           PERFORM SOME-FUNCTION.
+           GOBACK.
+
+       SOME-FUNCTION.
+           DISPLAY "This is a function".
